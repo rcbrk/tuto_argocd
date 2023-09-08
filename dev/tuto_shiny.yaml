@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: tuto-shiny
+  name: tuto-shiny
+spec:
+  selector:
+    matchLabels:
+      run: tuto-shiny
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: tuto-shiny
+    spec:
+      containers:
+      - image: rchebrek/tuto_shiny:latest
+        name: tuto-shiny
+        ports:
+        - containerPort: 3838
+      imagePullSecrets:
+      - name: regcred
+      

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tuto-shiny
+  labels:
+    run: tuto-shiny
+spec:
+  type: NodePort
+  ports:
+  - protocol: TCP
+    port: 3838
+    targetPort: 3838
+  selector:
+    run: tuto-shiny
