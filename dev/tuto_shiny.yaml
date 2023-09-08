@@ -15,7 +15,7 @@ spec:
         run: tuto-shiny
     spec:
       containers:
-      - image: rchebrek/tuto_shiny:latest
+      - image: rchebrek/tuto_shiny:1.0
         name: tuto-shiny
         ports:
         - containerPort: 3838
